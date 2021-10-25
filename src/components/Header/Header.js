@@ -13,7 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 import { CartState } from "../Context/Context";
 import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
+
 
 
 const Header = () => {
