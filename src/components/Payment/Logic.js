@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Col } from "react-bootstrap"
 import { PaystackButton } from "react-paystack"
 const Logic = () => {
   const publicKey = "pk_test_0aac2527b2e3b4fe2af9d634556ca78e9fc1f230"

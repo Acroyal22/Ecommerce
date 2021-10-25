@@ -17,15 +17,15 @@ var firebaseConfig = {
 };
 console.log(firebaseConfig);
 
-const sendPasswordResetEmail = async (email) => {
-  try {
-    await auth.sendPasswordResetEmail(email);
-    alert("Password reset link sent!");
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
+// const sendPasswordResetEmail = async (email) => {
+//   try {
+//     await auth.sendPasswordResetEmail(email);
+//     alert("Password reset link sent!");
+//   } catch (err) {
+//     console.error(err);
+//     alert(err.message);
+//   }
+// };
 const logout = () => {
   auth.signOut();
 };
@@ -33,6 +33,6 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 export { auth };
-export { db };
+export { db,logout };
 export default firebase;
 

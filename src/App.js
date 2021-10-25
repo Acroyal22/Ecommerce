@@ -2,7 +2,7 @@
 import Header from "./components/Header/Header";
 import "./index.css";
 
-import { BrowserRouter, Route,Redirect } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/DashBoard/Home";
 import Login from "./components/Login/Login";

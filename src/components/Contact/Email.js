@@ -22,7 +22,7 @@ const Email = () => {
             <div className="card mt-2 mx-auto p-4 bg-light">
                 <div className="card-body bg-light">
                     <div className="container">
-                        <form id="contact-form" role="form">
+                        <form id="contact-form">
                             <div className="controls">
                                 <div className="row">
                                     <div className="col-md-6">

@@ -4,7 +4,7 @@ import { auth } from "../firebase";
 import "../../index.css";
 import { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 
 const Register = (props) => {
   const emailRef = useRef(null);

@@ -17,7 +17,7 @@ import { useState } from "react";
 
 
 const Header = () => {
-const [show, setShow]=useState(true)
+
 
   const {
     state: { cart },
@@ -69,7 +69,7 @@ console.log(isLogin)
       </li>}
    
      { isLogin && <li className="nav-item active" onClick={handleOnClick}>
-     <button onClick={()=>setShow(true)}  className="nav-link" >Logout<span className="sr-only">(current)</span></button>
+     <button   className="nav-link" >Logout<span className="sr-only">(current)</span></button>
         </li>}
      
       
