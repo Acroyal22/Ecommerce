@@ -5,8 +5,10 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { CartState } from "../Context/Context";
 import Rating from "../Ratting/Ratting";
+import { auth } from "../firebase";
 
 const Cart = () => {
+
   const {
     state: { cart },
     dispatch,
@@ -19,11 +21,14 @@ const Cart = () => {
     );
   }, [cart]);
 
+  const isUser = auth.currentUser
+  console.log(isUser)
+
   return (
     <div className="home">
       <div className="productContainer">
         <ListGroup>
-          {cart.map((prod) => (
+          {  cart.map((prod) => (
             <ListGroup.Item key={prod.id}>
               <Row>
                 <Col md={2}>
@@ -72,12 +77,13 @@ const Cart = () => {
               </Row>
             </ListGroup.Item>
           ))}
+
         </ListGroup>
       </div>
       <div className="filters summary">
         <span className="title">Subtotal ({cart.length}) items</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
-        <Link to="/paid" >  <Button type="button" disabled={cart.length === 0}>
+        <Link to="/logic" >  <Button type="button" disabled={cart.length === 0}>
           Proceed to Checkout
         </Button> </Link>
         

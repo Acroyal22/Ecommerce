@@ -11,25 +11,39 @@ import {
 } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { CartState } from "../Context/Context";
+import { auth } from "../firebase";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 
 const Header = () => {
+const [show, setShow]=useState(true)
+
   const {
     state: { cart },
     dispatch,
     productDispatch,
   } = CartState();
+  const histroy = useHistory();
 
+  const handleOnClick = async () => {
+    await auth.signOut();
+    histroy.push("/login");
+  };
+  
+
+const isLogin=auth.currentUser
+console.log(isLogin)
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <Link to="/" style={{ textDecoration: 'none' ,textSize:'2rem'}} >Shopping Cart</Link>
+          <Link to="/" style={{ textDecoration:"none" ,textSize:"2rem"}} >Shopping Cart</Link>
         </Navbar.Brand>
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
             <FormControl
-              style={{ width: 800 }}
+              style={{ width: "800px" }}
               type="search"
               placeholder="Search a product..."
               className="m-auto"
@@ -46,25 +60,29 @@ const Header = () => {
           </Navbar.Text>
         )}
 
+
+
 <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
+      {!isLogin && <li className="nav-item active">
+        <a className="nav-link" href= "/login" >LogIn<span className="sr-only">(current)</span></a>
+      </li>}
+   
+     { isLogin && <li className="nav-item active" onClick={handleOnClick}>
+     <button onClick={()=>setShow(true)}  className="nav-link" >Logout<span className="sr-only">(current)</span></button>
+        </li>}
+     
+      
       <li className="nav-item active">
-        <a className="nav-link" href="/login">LogIn<span className="sr-only">(current)</span></a>
+        {!isLogin ?<a className="nav-link" href="/register">Register</a>:"null"}
       </li>
-      <li className="nav-item active">
-        <a className="nav-link" href="/register">Register</a>
-      </li>
-      <li className="nav-item dropdown active">
-        <a className="nav-link dropdown-toggle" href="https://www.freeElogodesign.org/img/logo-ex-4.png" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+    { isLogin ? <li className="nav-item dropdown active">
+        <Link className="nav-link dropdown-toggle" to= "/email" aria-haspopup="true" aria-expanded="false">
           Contact Us
-        </a>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a className="dropdown-item" href="https://www.freeElogodesign.org/img/logo-ex-4.png">Email</a>
-          <a className="dropdown-item" href="https://www.freeElogodesign.org/img/logo-ex-4.png">Direct Call </a>
-          <div className="dropdown-divider"></div>
-          <a className="dropdown-item" href="https://www.freeElogodesign.org/img/logo-ex-4.png">Drop a note</a>
-        </div>
-      </li>
+        </Link>
+        
+      </li>:"null"}
       
       </ul>
       </div>
@@ -75,7 +93,7 @@ const Header = () => {
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 370 }}>
+            <Dropdown.Menu style={{ minWidth: 350,marginLeft:"-280px",marginTop:"50px"}}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -102,7 +120,7 @@ const Header = () => {
                     </span>
                   ))}
                   <Link to="/cart">
-                    <Button style={{ width: "35%"}}>
+                    <Button style={{ width: "35%",marginTop:"50px"}}>
                       Go To Cart
                     </Button>
                   </Link>

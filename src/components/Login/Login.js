@@ -47,7 +47,7 @@ const Login = () => {
 
     // This gives you a Google Access Token. You can use it to access the Google API.
     const token = credential.accessToken;
-    console.log(token)
+    
     // The signed-in user info.
 
     const user = result.user;
@@ -68,7 +68,15 @@ const Login = () => {
 
   }
   
-
+  // const sendPasswordResetEmail = async (email) => {
+  //   try {
+  //     await auth.sendPasswordResetEmail(email);
+  //     alert("Password reset link sent!");
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert(err.message);
+  //   }
+  // };
   
   return (
     <div className="container">
@@ -172,7 +180,7 @@ const Login = () => {
           </div>
           <div className="text-grey-dark mt-6">
                     You dont have an account?           
-                    <a className="no-underline border-b border-blue text-blue" href="./register">
+                    <a className="no-underline border-b border-blue text-blue" href= "/register" >
                         Register one
                     </a>.
                 </div>

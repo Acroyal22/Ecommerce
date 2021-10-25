@@ -3,17 +3,19 @@ import { Formik } from "formik";
 import { auth } from "../firebase";
 import "../../index.css";
 import { useRef } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Register = (props) => {
   const emailRef = useRef(null);
+  
   const passwordRef = useRef(null);
   const userNameRef = useRef("");
-  const confirmPassword = useRef("");
-
+  const confirmPassword = useRef("")
   const RegisterHandler = (values) => {
     console.log(values);
   };
+  
 
   const LoginValidationSchema = Yup.object().shape({
     userName: Yup.string().required(),
@@ -31,6 +33,7 @@ const Register = (props) => {
       ),
     }),
   });
+const histroy=useHistory()
   const signUp = (e) => {
     e.preventDefault();
     auth
@@ -40,15 +43,17 @@ const Register = (props) => {
       )
       .then((user) => {
         console.log(user);
-        props.history.replace("/dashboard");
+        histroy.push("/");
       })
       .catch((err) => {
         console.log(err);
       });
+      
+
+      
   };
-  const history = useHistory();
-    history.push("/login");
-  
+
+ 
 
   return (
     <div className="container register">
@@ -57,7 +62,7 @@ const Register = (props) => {
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h3>Welcome</h3>
                         <p>You are 30 seconds away from earning your own money!</p>
-                        <input type="submit" name="" value="Login"/><br/>
+                        <input type="submit" name="" value="Register"/><br/>
                     </div>
       <div className="col-md-9 register-right">
 
