@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import { Card, Button } from "react-bootstrap";
 import { CartState } from "../components/Context/Context";
 import Rating from "../components/Ratting/Ratting";
@@ -11,13 +12,16 @@ const SingleProduct = ({ prod }) => {
   } = CartState();
 
   return (
-    <div className="products">
+    
+    <div className="products " > 
+    
+      <div className>
       <Card>
         <Card.Img variant="top" src={prod.image} alt={prod.name} />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
-            <span>₹ {prod.price.split(".")[0]}</span>
+            <span>$ {prod.price.split(".")[0]}</span>
             {prod.fastDelivery ? (
               <div>Fast Delivery</div>
             ) : (
@@ -26,7 +30,7 @@ const SingleProduct = ({ prod }) => {
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
           {cart.some((p) => p.id === prod.id) ? (
-            <Button
+           <Button
               variant="danger"
               onClick={() =>
                 dispatch({
@@ -52,6 +56,7 @@ const SingleProduct = ({ prod }) => {
           )}
         </Card.Body>
       </Card>
+    </div>
     </div>
   );
 };

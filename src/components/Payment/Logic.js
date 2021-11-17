@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { PaystackButton } from "react-paystack"
+import { Link } from "react-router-dom"
+import { auth } from "../firebase"
 const Logic = () => {
   const publicKey = "pk_test_0aac2527b2e3b4fe2af9d634556ca78e9fc1f230"
   const amount = 100000 *100
@@ -40,6 +42,7 @@ const onSubmit=async (e)=>{
   // const  {data } = await axios.post("https://api.paystack.co/transaction/initialize")
   // console.log(formValues)
 }
+const isLogin=auth.currentUser
   return (
    <form onSubmit={onSubmit}>
      <div className="container">
@@ -87,7 +90,7 @@ const onSubmit=async (e)=>{
             </div>
             
               <div className="button">
-            <PaystackButton className="paystack-button" {...componentProps} />
+           { isLogin?<PaystackButton className="paystack-button" {...componentProps} />:<Link to="/login">please Login to procced</Link>}
             </div>
             </div>
 

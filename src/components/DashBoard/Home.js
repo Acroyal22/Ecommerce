@@ -95,19 +95,30 @@ const Home = () => {
   return (
     <div>
 <Bar/>
-
+<div className="row">
+<div className="col-1"></div>
+  <div className="col-10">
+    <div className="float-left">
+    <span className="breadcrumb-item active" ><strong>Filter Products</strong></span>
+    </div>
+    <div className="float-right">
+    <Filters/>
+    </div>
+  </div>
+  <div className="col-1"></div>
+</div>
     <div className="home row">
-
-              <div className="col-2">
-              <Filters />
-              </div> 
-              <div className="productContainer col-10">
+              <div className="col-0.5"></div>
+              <div className="productContainer col-12">
                 {transformProducts().map((prod) => (
                   <SingleProduct prod={prod} key={prod.id} />
                 ))}
               </div>
+              <div className="col-0.5"></div>
     </div>
-    <div className="card bg-dark">
+    <div className="row">
+      <div className="col-1"></div>
+    <div className="col-10" >
                                   <Clock
                                     timerDays={timerDays}
                                     timerHours={timerHours}
@@ -115,8 +126,16 @@ const Home = () => {
                                     timerSeconds={timerSeconds}
                                   />
     </div> 
+    <div className="col-1"></div>
+    </div>
 <Service/>
-<Blog/>
+<div className="row">
+<div className="col-1"></div>
+<div className="col-10"><Blog/></div>
+<div className="col-1"></div>
+</div>
+
+
 <Footer/>
     </div>
   );

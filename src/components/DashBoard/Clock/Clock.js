@@ -2,49 +2,58 @@ import React from "react";
 
 const Clock = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
   return (
-    // <Fragment>
-      <section  className="card text-center">
-        
-         
-          <div  className="card-body">
+     <div>
+     
+<div  className="card-body text-center">
               
-                  <h3 className="card-header">NEWS AND INSPIRATION</h3>
-                  <strong className="hot">HOT SALES FOR NEW <br/> ARRIVALS  90% DISCOUNT</strong>
+              <h3 className="card-header">NEWS AND INSPIRATION</h3>
+              <strong className="hot">HOT SALES FOR NEW <br/> ARRIVALS  90% DISCOUNT</strong>
+</div>
 
-           <div>
-              <p>{timerDays}</p>
+    <div className="card-group text-center">
+    
+  <div className="card">
+   
+    <div className="card-body">
+    <h1>{timerDays}</h1>
               <small>Days</small>
-           
-            <span>:</span>
-            
-              <p>{timerHours}</p>
+
               <small>Hours</small>
-            {" "}
-            <span>:</span>
+   
+    </div>
+  </div>
+  <div className="card">
+  
+    <div className="card-body">
+                 
+    
+            
+            <h3>{timerHours}</h3>
+            <small>Hours</small>
+    
           
-              <p>{timerMinutes}</p>
-              <small>Minutes</small>
-            {" "}
-            <span>:</span>
-           
-              <p>{timerSeconds}</p>
-              <small>Seconds</small>
-           
-            <br/>
-           
-                
-                <h2 className="new">$10</h2>
+          <h3>{timerMinutes}</h3>
+          <small>Minutes</small>
+        {" "}
+     
+       
+          <h3>{timerSeconds}</h3>
+          <small>Seconds</small>
+    </div>
+  </div>
+  <div className="card d-flex">
+   
+    <div className="card-body text-center">
+    <h2 className="new">$10</h2>
                 <small className="newPrice">New Price</small>
           
                 
                 <h2 className="old">$100</h2>
                 <small className="oldPrice">Old Price</small>
-                </div>
-          </div>
-        
-        </section>
-    
-    // </Fragment>
+    </div>
+  </div>
+</div>
+   </div>
   );
 };
 

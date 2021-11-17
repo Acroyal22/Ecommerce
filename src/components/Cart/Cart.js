@@ -25,6 +25,7 @@ const Cart = () => {
   console.log(isUser)
 
   return (
+    <div className="container-fluid">
     <div className="home">
       <div className="productContainer">
         <ListGroup>
@@ -37,7 +38,7 @@ const Cart = () => {
                 <Col md={2}>
                   <span>{prod.name}</span>
                 </Col>
-                <Col md={2}>₹ {prod.price}</Col>
+                <Col md={2}>$ {prod.price}</Col>
                 <Col md={2}>
                   <Rating rating={prod.ratings} />
                 </Col>
@@ -80,13 +81,17 @@ const Cart = () => {
 
         </ListGroup>
       </div>
-      <div className="filters summary">
-        <span className="title">Subtotal ({cart.length}) items</span>
-        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
+        <div class="card w-60">
+  
+  <div class="card-body">
+  <span className="title">Subtotal ({cart.length}) items</span>
+        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: $ {total}</span>
+        <br/>
         <Link to="/logic" >  <Button type="button" disabled={cart.length === 0}>
           Proceed to Checkout
         </Button> </Link>
-        
+  </div>
+</div>
       </div>
     </div>
   );

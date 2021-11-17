@@ -15,9 +15,9 @@ function App() {
   return (
     
    
-    <BrowserRouter>
+    <BrowserRouter className="container-fluid">
        <Header />
-      <div className="container-fluid">
+      <div >
         <Route path="/" exact>
           <Home/>
         </Route>

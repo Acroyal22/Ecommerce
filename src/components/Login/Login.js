@@ -79,12 +79,9 @@ const Login = () => {
   // };
   
   return (
-    <div className="container">
-    <div className="row">
-    <div className="col-md-6 mx-auto p-0">
-    <div className="card">
+    <div className="container-fluid">
     <div className="login-box">
-    <div className="login-snip"> <input id="tab-1" type="radio" name="tab" className="sign-in" checked /><label for="tab-1" className="tab">Login</label> <input id="tab-2" type="radio" name="tab" className="sign-up" /><label for="tab-2" className="tab"></label>
+    <div className="login-snip" > <input id="tab-1" type="radio" name="tab" className="sign-in" checked /><label for="tab-1" className="tab" >Logins</label> <input id="tab-2" type="radio" name="tab" className="sign-up" /><label for="tab-2" className="tab"></label>
     <div className="login-space">
    <div className="login">
         <Formik
@@ -104,7 +101,7 @@ const Login = () => {
             handleBlur,
           }) => (
             <>
-              <form onSubmit={handleSubmit} className="mt-10">
+              <form onSubmit={handleSubmit} >
                 <h1 className="tab">
                   Log in to your account 🔐
                 </h1>
@@ -160,14 +157,14 @@ const Login = () => {
             </>
           )}
         </Formik>
-        <div className="flex mt-7 items-center text-center">
+        <div className="flex  items-center text-center">
                                 <hr className="border-gray-300 border-1 w-full rounded-md" />
                                 <label className="block font-medium text-sm text-gray-600 w-full">
                                     or use google
                                 </label>
                                 <hr className="border-gray-300 border-1 w-full rounded-md" />
                             </div>
-        <div className="mb-10">
+        <div>
           <div
            className="mr-5 bg-blue-500 border-none px-4 py-2 rounded-xl cursor-pointer text-white shadow-xl hover:shadow-inner transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105"
             onClick={(e) =>{e.preventDefault(); handleGoogle()}
@@ -178,7 +175,7 @@ const Login = () => {
             <GoogleOutlined />
             Sign in with google
           </div>
-          <div className="text-grey-dark mt-6">
+          <div className="text-grey-dark">
                     You dont have an account?           
                     <a className="no-underline border-b border-blue text-blue" href= "/register" >
                         Register one
@@ -187,11 +184,9 @@ const Login = () => {
                  </div>
                  </div>
                  </div>
+    
       </div>
       </div>
-      </div>
-    </div>
-    </div>
     </div>
   );
 };
