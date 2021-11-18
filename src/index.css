@@ -1,3 +1,16 @@
+   /* media css for home products start */
+   @media only screen and (min-width:320px) and (max-width:767px) {
+        .home-product-grid {
+            display: inline-block !important;
+            width: 100% !important;
+            margin-left: -15px !important;
+            position:  relative !important;
+        }
+        .mobile-card{
+         width: 340px !important; 
+        }
+    }
+   /* media css for home products ends */
    .register{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
     margin-top: 3%;

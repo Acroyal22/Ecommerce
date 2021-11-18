@@ -7,18 +7,22 @@ const Bar = () => {
   return (
     <div>
       
-       
+        <div>
           <div
             id="carouselExampleIndicators"
             className="carousel slide"
             data-ride="carousel"
             style={{marginTop:"30px",marginBottom:"30px"}}
           >
-         <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                className="active"
+              ></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
             <div className="carousel-inner" >
               <div className="carousel-item active">
                 <div className="container">
@@ -94,7 +98,7 @@ const Bar = () => {
               ></span>
               <span className="sr-only">Next</span>
             </a>
-          
+          </div>
         </div> 
     </div>
   );

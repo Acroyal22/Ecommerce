@@ -12,11 +12,8 @@ const SingleProduct = ({ prod }) => {
   } = CartState();
 
   return (
-    
-    <div className="products " > 
-    
-      <div className>
-      <Card>
+    //  <div className="col col-md-3  mt-4">
+      <Card className="mobile-card">
         <Card.Img variant="top" src={prod.image} alt={prod.name} />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
@@ -56,8 +53,7 @@ const SingleProduct = ({ prod }) => {
           )}
         </Card.Body>
       </Card>
-    </div>
-    </div>
+      // </div>
   );
 };
 

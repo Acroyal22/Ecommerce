@@ -93,28 +93,31 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div style={{ 
+      
+     }}>
 <Bar/>
-<div className="row">
-<div className="col-1"></div>
-  <div className="col-10">
-    <div className="float-left">
-    <span className="breadcrumb-item active" ><strong>Filter Products</strong></span>
-    </div>
-    <div className="float-right">
-    <Filters/>
-    </div>
-  </div>
-  <div className="col-1"></div>
-</div>
-    <div className="home row">
-              <div className="col-0.5"></div>
-              <div className="productContainer col-12">
+
+
+
+    <div className="row ml-4 mr-4">
+             {/* filter section start */}
+             <div className="col-md-12">
+                <div className="float-left ml-3">
+                <span className="breadcrumb-item active" ><strong>Filter Products</strong></span>
+                </div>
+                <div className="float-right mr-3">
+                <Filters/>
+                </div>
+              </div>
+             {/* filter section ends */}
+              <div className="col-12 col-md-12 productContainer home-product-grid">
                 {transformProducts().map((prod) => (
-                  <SingleProduct prod={prod} key={prod.id} />
+                    <div className="col-3 col-md-3 mt-4">
+                        <SingleProduct prod={prod} key={prod.id} />
+                    </div>
                 ))}
               </div>
-              <div className="col-0.5"></div>
     </div>
     <div className="row">
       <div className="col-1"></div>
