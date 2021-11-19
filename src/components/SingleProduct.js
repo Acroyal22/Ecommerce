@@ -13,7 +13,7 @@ const SingleProduct = ({ prod }) => {
 
   return (
     //  <div className="col col-md-3  mt-4">
-      <Card className="mobile-card">
+      <Card className="card mt-4 mb-2">
         <Card.Img variant="top" src={prod.image} alt={prod.name} />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>

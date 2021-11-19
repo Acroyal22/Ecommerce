@@ -70,8 +70,8 @@ const onChange=(e)=>{setFilter(e.target.value)}
         
             </li>:"null"}
         </ul>
-        <div class="d-flex">
-      <form onSubmit={onFilter}>
+        
+      <form onSubmit={onFilter} className="d-flex col-xs-4" >
         <input
               type="search"
               placeholder="Search a product..."
@@ -131,7 +131,7 @@ const onChange=(e)=>{setFilter(e.target.value)}
             </Dropdown.Menu>
           </Dropdown>
           </div>
-        </div>
+        
       </div>
     </div>
   </nav>

@@ -100,20 +100,20 @@ const Home = () => {
 
 
 
-    <div className="row ml-4 mr-4">
+
+
+    <div className="row ml-5 mr-4">
              {/* filter section start */}
              <div className="col-md-12">
-                <div className="float-left ml-3">
-                <span className="breadcrumb-item active" ><strong>Filter Products</strong></span>
-                </div>
+                
                 <div className="float-right mr-3">
                 <Filters/>
                 </div>
               </div>
              {/* filter section ends */}
-              <div className="col-12 col-md-12 productContainer home-product-grid">
+              <div className="row">
                 {transformProducts().map((prod) => (
-                    <div className="col-3 col-md-3 mt-4">
+                    <div className="col-12 col-md-4">
                         <SingleProduct prod={prod} key={prod.id} />
                     </div>
                 ))}

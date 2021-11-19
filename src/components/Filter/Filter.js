@@ -8,22 +8,10 @@ const Filters = () => {
     productState: { byStock, byFastDelivery, sort, byRating },
   } = CartState();
 
-  // make state for rating
-
   return (
     
    <div className="float-right">
 
-    {/* <div className="filters">
-      // <span  className="breadcrumb-item active" aria-current="page"> Filter Productss </span>
-      
-      
-      
-      
-    
-      
-    </div>
-    */}
     <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
       <div className="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

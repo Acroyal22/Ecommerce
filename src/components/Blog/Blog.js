@@ -57,7 +57,7 @@ const Blog = () => {
           design tricks to help you out.
         </h3>
        <div class="card-group">
-  <div class="card">
+  <div className="card m-4">
     <img
                 className="card-img-top"
                 src={blog1}
@@ -74,7 +74,7 @@ const Blog = () => {
               </a>
             </div>
   </div>
-  <div class="card">
+  <div className="card m-4">
   <img
                 className="card-img-top"
                 src={f4}
@@ -93,7 +93,7 @@ const Blog = () => {
            
     </div>
   </div>
-  <div class="card">
+  <div className="card m-4">
   <img
                 className="card-img-top"
                 src={f2}
