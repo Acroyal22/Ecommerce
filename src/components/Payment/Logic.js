@@ -32,60 +32,69 @@ const onSubmit=async (e)=>{
 }
 const isLogin=auth.currentUser
   return (
+    <div className="container">
    <form onSubmit={onSubmit}>
-     <div className=" mb-3">
-
-       <div className="row">
-      
-        <div className= "col-25" >
-              <label for="exampleInputEmail1"  class="form-label" >Name </label>
-              </div>
-              <div className= "col-75">
+     
+     
+     <div >Please make your Payment!</div>
+               <div className="row">
+                 <div className="col-25">
+               <label for="fname" >Full Name </label>
+               </div>
+               <div className="col-75">
               <input
                 type="text"
                 id="fname"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                placeholder="Full Name"
               />
-            </div>
-            </div>
+              </div>  
+              </div>
 
-
-            <div className="row"> 
-            <div className= "col-25">
-              <label>Email</label></div>
+            <div className= "row">
+              <div className="col-25">
+              <label for="email" >Email Address</label>
+              </div>
               <div className="col-75">
               <input
+                className="input"
                 type="text"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="email adress  ....."
               />
-            </div>
-
-            </div>
-            <div className="row">
-              <div className="col-25">
-              <label> Phone </label></div>
+          </div>
+          </div>
+           
+          
+          <div className="row">
+            <div className="col-25">
+              <label  for="phone"> Phone Number</label>
+              </div>
               <div className="col-75">
               <input
+                className="input"
                 type="text"
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                placeholder="phone number ....."
               />
-              </div>
+            </div>
             </div>
             
               <div className="buttons">
            { isLogin? <PaystackButton className="paystack-button" {...componentProps} /> :<Link to="/login"> please Login to procced</Link>}
             </div>
-            </div>
-
            
-         
+
+   
    
       </form>
+
+      </div>
   )
 }
 
