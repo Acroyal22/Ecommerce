@@ -802,76 +802,25 @@ label {
   display: table;
   clear: both;
 }
-
-/* nav bar begginging */
-
-/* .navbar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
- {
-      @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-
-        .navbar-nav {
-          flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
-
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-          }
-        }
-
-        .navbar-nav-scroll {
-          overflow: visible;
-        }
-
-        .navbar-collapse {
-          display: flex !important; 
-          flex-basis: auto;
-        }
-
-        .navbar-toggler {
-          display: none;
-        }
-
-        .offcanvas-header {
-          display: none;
-        }
-
-        .offcanvas {
-          position: inherit;
-          bottom: 0;
-          z-index: 1000;
-          flex-grow: 1;
-          visibility: visible !important; 
-          background-color: transparent;
-          border-right: 0;
-          border-left: 0;
-          @include transition(none);
-          transform: none;
-        }
-        .offcanvas-top,
-        .offcanvas-bottom {
-          height: auto;
-          border-top: 0;
-          border-bottom: 0;
-        }
-
-        .offcanvas-body {
-          display: flex;
-          flex-grow: 0;
-          padding: 0;
-          overflow-y: visible;
-        }
-      }
-    }
-  }
-} */
-
-/* nav bar ending */
+.primary:hover {
+  color: #fff;
+  background-color: #00b3db;
+  border-color: #285e8e; /*set the color you want here*/
+}
+.buttons{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttons:hover {
+  background-color: #555555;
+  color: white;
+}

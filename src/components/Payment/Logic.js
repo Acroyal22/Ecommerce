@@ -27,30 +27,18 @@ const Logic = () => {
     onClose: () => alert("Buy now naira is loosing value daily"),
   }
 
-  
-  // const [formValues , setFormValues] = useState  ({
-  //   email : '',
-  //   amount : 100000000,
-  //   phone : '',
-  //   name : ''
-  // // } )
-
-  // const handleChange  = e => setFormValues({...formValues, [e.target.name]: e.target.value})
-
 const onSubmit=async (e)=>{
   e.preventDefault()
-  // const  {data } = await axios.post("https://api.paystack.co/transaction/initialize")
-  // console.log(formValues)
 }
 const isLogin=auth.currentUser
   return (
    <form onSubmit={onSubmit}>
-     <div className="container">
+     <div className=" mb-3">
 
        <div className="row">
       
         <div className= "col-25" >
-              <label for="fname" >Name </label>
+              <label for="exampleInputEmail1"  class="form-label" >Name </label>
               </div>
               <div className= "col-75">
               <input
@@ -89,8 +77,8 @@ const isLogin=auth.currentUser
               </div>
             </div>
             
-              <div className="button">
-           { isLogin?<PaystackButton className="paystack-button" {...componentProps} />:<Link to="/login">please Login to procced</Link>}
+              <div className="buttons">
+           { isLogin? <PaystackButton className="paystack-button" {...componentProps} /> :<Link to="/login"> please Login to procced</Link>}
             </div>
             </div>
 

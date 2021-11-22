@@ -96,9 +96,9 @@ const Filters = () => {
         </ul>
         
       </div>
-            <div>
+            <div >
                 <Button
-                  className="btn btn-outline-primary ml-2"
+                  className="primary ml-2"
                   onClick={() =>
                     productDispatch({
                       type: "CLEAR_FILTERS",

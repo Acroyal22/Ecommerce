@@ -14,6 +14,9 @@ import { useHistory } from "react-router-dom";
 
 
 
+
+
+
 const Header = () => {
 
   const  [filter ,setFilter] = useState("")
@@ -36,19 +39,21 @@ const onFilter=(e) => {
       payload: filter,
     });
   } 
+  console.log()
+
 const isLogin=auth.currentUser
-console.log(isLogin)
+
 const onChange=(e)=>{setFilter(e.target.value)}
   return (
     <header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
+  <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+    <div className="container-fluid">
       <Link to="/" className="navbar-brand" style={{ textDecoration:"none" ,textSize:"2rem"}} >Shopping Cart</Link>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <div className="collapse navbar-collapse" id="navbarCollapse">
+        <ul className="navbar-nav me-auto mb-2 mb-md-0">
          
             {!isLogin && <li className="nav-item active">
               <a className="nav-link" href= "/login" >LogIn<span className="sr-only">(current)</span></a>
