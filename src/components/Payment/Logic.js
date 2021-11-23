@@ -32,6 +32,7 @@ const onSubmit=async (e)=>{
 }
 const isLogin=auth.currentUser
   return (
+    <div className="containers">
     <div className="container">
    <form onSubmit={onSubmit}>
      
@@ -94,6 +95,7 @@ const isLogin=auth.currentUser
    
       </form>
 
+      </div>
       </div>
   )
 }
