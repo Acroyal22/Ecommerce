@@ -5,44 +5,6 @@ import blog1 from "../images/blog 1.jpg";
 const Blog = () => {
   return (
     <div>
-    
-      {/* 
-       
-        <div
-          className="card-deck"
-          style={{
-            marginTop: "50px",
-           
-            paddingLeft: "10px",
-          }}
-        >
-          <div className="cards">
-            <div className="card">
-              
-            </div>
-           
-          </div>
-          <div className="cards">
-            <div className="card">
-             
-            </div>
-            
-          </div>
-          <div className="cards">
-            <div className="card">
-             
-            </div>
-            
-            </div>
-          </div>
-        </div>
-        <div
-         className="d-grid gap-2 col-6 mx-auto"
-          style={{ marginTop:"30px" }}
-        >
-          <button type="button" className="btn btn-primary" >View More</button>
-        </div>
-       */}
        <strong>
           <h1
             style={{ textAlign: "center", marginTop: "80px", fontSize: "2rem" }}

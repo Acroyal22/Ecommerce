@@ -113,8 +113,9 @@ const Home = () => {
              {/* filter section ends */}
               <div className="row">
                 {transformProducts().map((prod) => (
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 col-sm-6 ">
                         <SingleProduct prod={prod} key={prod.id} />
+                      
                     </div>
                 ))}
               </div>

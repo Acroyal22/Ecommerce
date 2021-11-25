@@ -1,4 +1,4 @@
-import { Button, Form } from "react-bootstrap";
+import { Button, Dropdown, Form } from "react-bootstrap";
 import { CartState } from "../Context/Context";
 import Rating from "../Ratting/Ratting";
 
@@ -11,14 +11,15 @@ const Filters = () => {
   return (
     
    <div className="float-right">
-
-    <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
-      <div className="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Product Filters
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li>   
+      <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
+      <div className="btn-group" role="group">  
+<Dropdown>
+<Dropdown.Toggle variant="success" id="dropdown-basic">
+    Product Filter
+  </Dropdown.Toggle>
+    
+  <Dropdown.Menu>
+          <Dropdown.Item>   
             <Form.Check
               inline
               label="Ascending"
@@ -33,8 +34,8 @@ const Filters = () => {
               }
               checked={sort === "lowToHigh" ? true : false}
             />
-          </li>
-          <li>
+          </Dropdown.Item>
+          <Dropdown.Item>
             <Form.Check
               inline
               label="Descending"
@@ -49,8 +50,8 @@ const Filters = () => {
               }
               checked={sort === "highToLow" ? true : false}
             />
-          </li>
-          <li>
+          </Dropdown.Item>
+          <Dropdown.Item>
             <Form.Check
               inline
               label="Include Out of Stock"
@@ -64,8 +65,8 @@ const Filters = () => {
               }
               checked={byStock}
             />
-          </li>
-          <li>
+          </Dropdown.Item>
+          <Dropdown.Item>
             <Form.Check
               inline
               label="Fast Delivery Only"
@@ -79,8 +80,8 @@ const Filters = () => {
               }
               checked={byFastDelivery}
             />
-          </li>
-          <li>
+          </Dropdown.Item>
+          <Dropdown.Item>
             <label style={{ paddingRight: 10 }}>Rating: </label>
             <Rating
               rating={byRating}
@@ -92,11 +93,11 @@ const Filters = () => {
               }
               style={{ cursor: "pointer" }}
             />
-          </li>
-        </ul>
+          </Dropdown.Item>
         
-      </div>
-            <div >
+          </Dropdown.Menu>
+          </Dropdown>
+            <div>
                 <Button
                   className="primary ml-2"
                   onClick={() =>
@@ -108,8 +109,11 @@ const Filters = () => {
                 CLEAR
                 </Button>
                 </div>
-            </div>
-    </div>
+                </div>
+                </div>
+                </div>
+           
+
   );
 };
 
