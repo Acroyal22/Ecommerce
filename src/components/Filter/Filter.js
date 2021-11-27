@@ -14,7 +14,7 @@ const Filters = () => {
       <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
       <div className="btn-group" role="group">  
 <Dropdown>
-<Dropdown.Toggle variant="success" id="dropdown-basic">
+<Dropdown.Toggle variant="dark" id="dropdown-basic">
     Product Filter
   </Dropdown.Toggle>
     
@@ -100,6 +100,7 @@ const Filters = () => {
             <div>
                 <Button
                   className="primary ml-2"
+                  variant="dark"
                   onClick={() =>
                     productDispatch({
                       type: "CLEAR_FILTERS",

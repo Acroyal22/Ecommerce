@@ -78,6 +78,7 @@ const onChange=(e)=>{setFilter(e.target.value)}
         
       <form onSubmit={onFilter} className="d-flex col-xs-4" >
         <input
+        
               type="search"
               placeholder="Search a product..."
               className="form-control me-2"
@@ -86,7 +87,7 @@ const onChange=(e)=>{setFilter(e.target.value)}
               onChange={onChange}
             />
            
-            <button onSubmit={onFilter} value={filter} className="btn btn-outline-success" type="submit"   >
+            <button onSubmit={onFilter} value={filter} className="btn btn-outline-light" type="submit"   >
            
          Search
             </ button>
