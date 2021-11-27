@@ -9,6 +9,7 @@ const SingleProduct = ({ prod }) => {
   } = CartState();
 
   return (
+ 
    
     <Card className="card mt-4 mb-2">
     <Card.Img variant="top" src={prod.image} alt={prod.name} />
@@ -50,6 +51,7 @@ const SingleProduct = ({ prod }) => {
       )}
     </Card.Body>
   </Card>
+
   );
 };
 
