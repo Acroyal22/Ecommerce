@@ -3,8 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import {
   Badge,
-  Button,
-  Dropdown,
+  Button,Nav,Navbar,Container,Dropdown
 } from "react-bootstrap";
 import { Link} from "react-router-dom";
 import { CartState } from "../Context/Context";
@@ -46,36 +45,34 @@ const isLogin=auth.currentUser
 const onChange=(e)=>{setFilter(e.target.value)}
   return (
     <header>
-  <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-    <div className="container-fluid">
-      <Link to="/" className="navbar-brand" style={{ textDecoration:"none" ,textSize:"2rem"}} >Shopping Cart</Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarCollapse">
-        <ul className="navbar-nav me-auto mb-2 mb-md-0">
-         
-            {!isLogin && <li className="nav-item active">
-              <a className="nav-link" href= "/login" >LogIn<span className="sr-only">(current)</span></a>
-            </li>}
-   
-           { isLogin && <li className="nav-item active" onClick={handleOnClick}>
-           <button   className="nav-link" >Logout<span className="sr-only">(current)</span></button>
-              </li>}
-     
-      
-            <li className="nav-item active">
-              {!isLogin ?<a className="nav-link" href="/register">Register</a> :"null" }
-            </li>
+  <Navbar bg="dark"  variant="dark" expand="lg">
+  <Container fluid>
+    <Navbar.Brand href="/">Shopping Cart</Navbar.Brand>
+    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+      <Nav
+        className="me-auto my-2 my-lg-0"
+        style={{ maxHeight: '100px' }}
+        navbarScroll
+      >
+        
 
-          { isLogin ? <li className="nav-item dropdown active">
-              <Link className="nav-link dropdown-toggle" to= "/email" aria-haspopup="true" aria-expanded="false">
-                Contact Us
-              </Link>
-        
-            </li>:"null"}
-        </ul>
-        
+        {!isLogin &&  
+        <Nav.Link href="/login">Login </Nav.Link> }
+
+     { isLogin &&  
+     <Nav.Link href="/" onClick={handleOnClick} > Logout </Nav.Link> }
+
+      {!isLogin ?
+           <Nav.Link href="/register" onClick={handleOnClick} > Register </Nav.Link> 
+          :"null"   }
+            
+
+      { isLogin ? 
+           <Nav.Link href="/email" onClick={handleOnClick} > Contact Us </Nav.Link>  
+        :"null"}
+
+      </Nav>
       <form onSubmit={onFilter} className="d-flex col-xs-4" >
         <input
         
@@ -99,7 +96,7 @@ const onChange=(e)=>{setFilter(e.target.value)}
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu >
+            <div className="dropdown-menu" >
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -134,13 +131,13 @@ const onChange=(e)=>{setFilter(e.target.value)}
               ) : (
                 <span style={{ padding: 10 }}>Cart is Empty!</span>
               )}
-            </Dropdown.Menu>
+            </div>
           </Dropdown>
           </div>
         
-      </div>
-    </div>
-  </nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
 </header>
   );
 };
