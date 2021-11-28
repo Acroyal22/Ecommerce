@@ -68,9 +68,9 @@ const onChange=(e)=>{setFilter(e.target.value)}
           :"null"   }
             
 
-      { isLogin ? 
+      
            <Nav.Link href="/email" onClick={handleOnClick} > Contact Us </Nav.Link>  
-        :"null"}
+  
 
       </Nav>
       <form onSubmit={onFilter} className="d-flex col-xs-4" >

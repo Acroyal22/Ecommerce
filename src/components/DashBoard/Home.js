@@ -94,7 +94,7 @@ const Home = () => {
 
   return (
     <div style={{ 
-      
+      overflowX:"hidden"
      }}>
 <Bar/>
 
