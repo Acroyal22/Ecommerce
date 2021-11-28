@@ -28,9 +28,13 @@ const Bar = () => {
                 <div className="container">
                   <img className="d-block w-100" src={skin} alt="First slide" />
                   <div className="text-block" >
-                    <h4 style={{ color: "white" }}>AMAZING STORE</h4>
-                    <p style={{ fontSize: "2rem" }}>GET THE GOOD STUFF</p>
-                    <small style={{ fontSize: "1.5rem" }}>
+                    <h4 style={{ background: "black",
+  color: "#f1f1f1" }}>AMAZING STORE</h4>
+                    <p style={{ fontSize: "2rem",
+  background: "black",
+  color: "#f1f1f1" }}>GET THE GOOD STUFF</p>
+                    <small style={{ fontSize: "1.5rem" ,background: "black",
+  color: "#f1f1f1"}}>
                       You are fully coverd
                     </small>
                   </div>
@@ -47,9 +51,12 @@ const Bar = () => {
                     alt="Second slide"
                   />
                   <div className="text-block">
-                    <h4 style={{ color: "white" }}>AMAZING STORE</h4>
-                    <p style={{ fontSize: "2rem" }}>GET THE GOOD STUFF</p>
-                    <small style={{ fontSize: "1.5rem" }}>
+                    <h4 style={{background: "black",
+  color: "#f1f1f1" }}>AMAZING STORE</h4>
+                    <p style={{ fontSize: "2rem",background: "black",
+  color: "#f1f1f1" }}>GET THE GOOD STUFF</p>
+                    <small style={{ fontSize: "1.5rem",background: "black",
+  color: "#f1f1f1" }}>
                       You are fully coverd
                     </small>
                   </div>
@@ -62,9 +69,12 @@ const Bar = () => {
                 <div className="container">
                   <img className="d-block w-100" src={banner} alt="Third slide" />
                   <div className="text-block">
-                    <h4 style={{ color: "white" }}>AMAZING STORE</h4>
-                    <p style={{ fontSize: "2rem" }}>GET THE GOOD STUFF</p>
-                    <small style={{ fontSize: "1.5rem" }}>
+                    <h4 style={{background: "black",
+  color: "#f1f1f1"}}>AMAZING STORE</h4>
+                    <p style={{ fontSize: "2rem",background: "black",
+  color: "#f1f1f1"}}>GET THE GOOD STUFF</p>
+                    <small style={{ fontSize: "1.5rem" ,background: "black",
+  color: "#f1f1f1"}}>
                       You are fully coverd
                     </small>
                   </div>

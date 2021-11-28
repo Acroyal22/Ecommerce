@@ -71,32 +71,14 @@ const onChange=(e)=>{setFilter(e.target.value)}
       
            <Nav.Link href="/email" onClick={handleOnClick} > Contact Us </Nav.Link>  
   
-
-      </Nav>
-      <form onSubmit={onFilter} className="d-flex col-xs-4" >
-        <input
-        
-              type="search"
-              placeholder="Search a product..."
-              className="form-control me-2"
-              aria-label="Search"
-              value={filter}
-              onChange={onChange}
-            />
-           
-            <button onSubmit={onFilter} value={filter} className="btn btn-outline-light" type="submit"   >
-           
-         Search
-            </ button>
-            </form>
-            <div className="ml-2">
+           <div className="ml-2">
             <Dropdown alignRight>
-            <Dropdown.Toggle variant="light">
-              <FaShoppingCart color="black" fontSize="25px" />
+            <Dropdown.Toggle variant="dark">
+              <FaShoppingCart color="black" fontSize="20px" />
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <div className="dropdown-menu" >
+            <Dropdown.Menu >
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -131,9 +113,27 @@ const onChange=(e)=>{setFilter(e.target.value)}
               ) : (
                 <span style={{ padding: 10 }}>Cart is Empty!</span>
               )}
-            </div>
+            </Dropdown.Menu>
           </Dropdown>
           </div>
+      </Nav>
+      <form onSubmit={onFilter} className="d-flex col-xs-4" >
+        <input
+        
+              type="search"
+              placeholder="Search a product..."
+              className="form-control me-2"
+              aria-label="Search"
+              value={filter}
+              onChange={onChange}
+            />
+           
+            <button onSubmit={onFilter} value={filter} className="btn btn-outline-light" type="submit"   >
+           
+         Search
+            </ button>
+            </form>
+            
         
     </Navbar.Collapse>
   </Container>
