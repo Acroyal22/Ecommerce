@@ -58,20 +58,20 @@ const onChange=(e)=>{setFilter(e.target.value)}
         
 
         {!isLogin &&  
-        <Nav.Link href="/login">Login </Nav.Link> }
+        <Navbar.Brand href="/login" style={{ margin:"15px" }}>Login </Navbar.Brand> }
 
      { isLogin &&  
-     <Nav.Link href="/" onClick={handleOnClick} > Logout </Nav.Link> }
+     <Navbar.Brand href="/" onClick={handleOnClick} style={{ margin:"15px" }} > Logout </Navbar.Brand> }
 
       {!isLogin ?
-           <Nav.Link href="/register" onClick={handleOnClick} > Register </Nav.Link> 
+           <Navbar.Brand href="/register" onClick={handleOnClick} style={{ margin:"15px" }}> Register </Navbar.Brand> 
           :"null"   }
             
 
       
-           <Nav.Link href="/email" onClick={handleOnClick} > Contact Us </Nav.Link>  
+           <Navbar.Brand href="/email" onClick={handleOnClick}style={{ margin:"15px" }} > Contact Us </Navbar.Brand>  
   
-           <div className="ml-2">
+           <div className="ml-2" >
             <Dropdown alignRight>
             <Dropdown.Toggle variant="dark">
               <FaShoppingCart color="black" fontSize="20px" />
