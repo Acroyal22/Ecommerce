@@ -13,16 +13,19 @@ const Filters = () => {
    <div className="float-right">
       <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
       <div className="btn-group" role="group">  
-<Dropdown>
+<Dropdown >
 <Dropdown.Toggle variant="dark" id="dropdown-basic">
     Product Filter
   </Dropdown.Toggle>
-    
-  <Dropdown.Menu>
+  
+  {['checkbox', 'radio'].map((type) => (
+    <div key={`inline-${type}`} className="mb-3">
+  <Dropdown.Menu >
           <Dropdown.Item>   
+          <label>Ascending</label>
             <Form.Check
               inline
-              label="Ascending"
+            
               name="group1"
               type="radio"
               id={`inline-1`}
@@ -36,9 +39,9 @@ const Filters = () => {
             />
           </Dropdown.Item>
           <Dropdown.Item>
+          <label>Descending</label>
             <Form.Check
               inline
-              label="Descending"
               name="group1"
               type="radio"
               id={`inline-2`}
@@ -51,10 +54,12 @@ const Filters = () => {
               checked={sort === "highToLow" ? true : false}
             />
           </Dropdown.Item>
+         
           <Dropdown.Item>
+          <label>Out of Stock</label>
             <Form.Check
               inline
-              label="Include Out of Stock"
+             
               name="group1"
               type="checkbox"
               id={`inline-3`}
@@ -67,9 +72,10 @@ const Filters = () => {
             />
           </Dropdown.Item>
           <Dropdown.Item>
+            <label>By Fast Delivery</label>
             <Form.Check
               inline
-              label="Fast Delivery Only"
+             
               name="group1"
               type="checkbox"
               id={`inline-4`}
@@ -96,6 +102,8 @@ const Filters = () => {
           </Dropdown.Item>
         
           </Dropdown.Menu>
+          </div>
+  ))}
           </Dropdown>
             <div>
                 <Button
