@@ -56,7 +56,7 @@ const Footer = () => {
   
   <form method="post">
   <div className="tt-subscribe">
-  <input type="text" required="" placeholder="Enter your email" />
+  <input type="email" required="" placeholder="Enter your email" />
   <div className="tt-subscribe-submit">
   <i className="fa fa-envelope" aria-hidden="true"></i>
   <input type="submit" value="" />
@@ -74,7 +74,7 @@ const Footer = () => {
   <div className="container">
   <div className="row">
   <div className="col-sm-6">
-  <div className="tt-copy-left">Copyright © company 2018. All rights reserved. </div>
+  <div className="tt-copy-left">Copyright © company {new Date().getFullYear()}. All rights reserved. </div>
   </div>
   <div className="col-sm-6">
   <div className="tt-copy-right">

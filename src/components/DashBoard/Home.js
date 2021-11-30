@@ -112,13 +112,16 @@ const Home = () => {
               </div>
              {/* filter section ends */}
              
-              <div className="row">
+              <div className="row" style={{ marginLeft:"2px" }}>
+              
                 {transformProducts().map((prod) => (
-                    <div className=" col-md-4 col-6 mb-3">
+                    <div className=" col-md-3 col-6" >
+                        <div className="col-2"></div>
                         <SingleProduct prod={prod} key={prod.id} />
                       
                     </div>
                 ))}
+                
               </div>
              
     </div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import {
   Badge,
@@ -71,11 +70,16 @@ const onChange=(e)=>{setFilter(e.target.value)}
       
            <Navbar.Brand href="/email" onClick={handleOnClick}style={{ margin:"15px" }} > Contact Us </Navbar.Brand>  
   
-           <div className="ml-2" >
+           <div className="ml-2"style={{ margin:"8px" }}  >
             <Dropdown alignRight>
-            <Dropdown.Toggle variant="dark">
-              <FaShoppingCart color="black" fontSize="20px" />
-              <Badge>{cart.length}</Badge>
+            <Dropdown.Toggle variant="ligh">
+            <Button variant="dark">
+            <i class="fas fa-shopping-cart"></i> <Badge bg="secondary">{cart.length}</Badge>
+  <span className="visually-hidden">unread messages</span>
+</Button>
+{/*             
+              
+             <Badge>{cart.length}</Badge> */}
             </Dropdown.Toggle>
 
             <Dropdown.Menu >
