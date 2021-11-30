@@ -2,6 +2,8 @@ import React from 'react';
 import banner from "../images/banner.jpg";
 import skin from "../images/skin.jpg";
 import beauty from "../images/beauty.jpg"
+import { Link } from 'react-router-dom';
+
 
 const Bar = () => {
   return (
@@ -38,9 +40,9 @@ const Bar = () => {
                       You are fully coverd
                     </small>
                   </div>
-                  <button className="btn" >
-                    View More <i className="fa fa-arrow-right"> </i>
-                  </button>
+                  <Link to="/more"> <button className="btn">
+                    View More <i className="fa fa-arrow-right"></i>
+                  </button></Link>
                 </div>
               </div>
               <div className="carousel-item" >
@@ -60,9 +62,9 @@ const Bar = () => {
                       You are fully coverd
                     </small>
                   </div>
-                  <button className="btn">
+                 <Link to="/more"> <button className="btn">
                     View More <i className="fa fa-arrow-right"></i>
-                  </button>
+                  </button></Link>
                 </div>
               </div>
               <div className="carousel-item" >
@@ -78,9 +80,9 @@ const Bar = () => {
                       You are fully coverd
                     </small>
                   </div>
-                  <button className="btn">
+                  <Link to="/more"> <button className="btn">
                     View More <i className="fa fa-arrow-right"></i>
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             </div>

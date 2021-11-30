@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
   <div className="container">
   <div className="row">
   <div className="col-sm-6 col-md-3 ">
-  <a className="webintern-footer-logo" href="https://www.freelogodesign.org/img/logo-ex-4.pngttps://www.freelogodesign.org/img/logo-ex-4.png">
+  <Link className="webintern-footer-logo" to="https://www.freelogodesign.org/img/logo-ex-4.pngttps://www.freelogodesign.org/img/logo-ex-4.png">
   <img className="img-responsive" src="https://www.freelogodesign.org/img/logo-ex-4.png" style={{width:"100px"}} alt="" />
-  </a>
+  </Link>
   <div className="simple-text dark padding-sm">
   <p>Totam rem aperiam, eaque ipsa quae ab illo inv ent ore veritatis et quasi architecto beatae vitae dict eaque ipsa quae ab.</p>
   </div>
@@ -20,25 +21,22 @@ const Footer = () => {
   
   <h4 className="webintern_footer_title h5"><small>Quick Links</small></h4>
   <ul className="webintern-footer-list">
-  <li><a  href="https://www.freelogodesign.org/img/logo-ex-4.png">Home</a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">About Us</a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png"> Services </a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png"> Customer Care </a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png"> Portfolio </a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">Contact Us</a></li>
+  <li><Link to="/"  to="">Home</Link></li>
+  <li><Link to="/about" >About Us</Link></li>
+  <li><Link to="/email">Contact Us</Link></li>
   </ul>
   <div className="empty-space xs-25 sm-25"></div>
   </div>
   <div className="col-sm-6 col-md-3 footer-3">
   
-  <h4 className="webintern_footer_title h5"><small> Our Courses </small></h4>
+  <h4 className="webintern_footer_title h5"><small> Our Catalogue </small></h4>
   <ul className="webintern-footer-list">
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">FASHION </a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">ELECTRONICS </a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">GAMES</a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">ACCESSORIES</a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">PHONES</a></li>
-  <li><a href="https://www.freelogodesign.org/img/logo-ex-4.png">OTHERS</a></li>
+  <li><Link to="/more">FASHION </Link></li>
+  <li><Link to="/more">ELECTRONICS </Link></li>
+  <li><Link to="/more">GAMES</Link></li>
+  <li><Link to="/more">ACCESSORIES</Link></li>
+  <li><Link to="/more">PHONES</Link></li>
+  <li><Link to="/more">OTHERS</Link></li>
   </ul>
   <div className="empty-space xs-25"></div>
   </div>
@@ -74,7 +72,7 @@ const Footer = () => {
   <div className="container">
   <div className="row">
   <div className="col-sm-6">
-  <div className="tt-copy-left">Copyright © company {new Date().getFullYear()}. All rights reserved. </div>
+  <div className="tt-copy-left">Ac Royal Ecommerce {new Date().getFullYear()}. All rights reserved. </div>
   </div>
   <div className="col-sm-6">
   <div className="tt-copy-right">

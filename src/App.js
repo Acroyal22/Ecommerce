@@ -9,6 +9,8 @@ import Login from "./components/Login/Login";
 import Register from "./components/Registers/Register";
 import Email from "./components/Contact/Email";
 import Logic from "./components/Payment/Logic";
+import More from "./components/More/More";
+import About from "./components/About/About";
 
 
 function App() {
@@ -37,7 +39,16 @@ function App() {
         <Route path="/logic">
           <Logic />
         </Route>
-       
+        <Route path="/more">
+          <More/>
+        </Route>
+        <Route path="/more">
+          <More/>
+        </Route>
+        <Route path="/about">
+          <About/>
+        </Route>
+        
       </div>
       
     </BrowserRouter>
