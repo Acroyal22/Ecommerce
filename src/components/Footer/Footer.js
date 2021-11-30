@@ -21,7 +21,7 @@ const Footer = () => {
   
   <h4 className="webintern_footer_title h5"><small>Quick Links</small></h4>
   <ul className="webintern-footer-list">
-  <li><Link to="/"  to="">Home</Link></li>
+  <li><Link to="/"  >Home</Link></li>
   <li><Link to="/about" >About Us</Link></li>
   <li><Link to="/email">Contact Us</Link></li>
   </ul>
