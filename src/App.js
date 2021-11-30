@@ -42,9 +42,6 @@ function App() {
         <Route path="/more">
           <More/>
         </Route>
-        <Route path="/more">
-          <More/>
-        </Route>
         <Route path="/about">
           <About/>
         </Route>
