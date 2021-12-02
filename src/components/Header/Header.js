@@ -46,7 +46,7 @@ const onChange=(e)=>{setFilter(e.target.value)}
     <header>
   <Navbar bg="dark"  variant="dark" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="/">Shopping Cart</Navbar.Brand>
+    <Navbar.Brand><Link to="/" className="text-light text-decoration-none">Shopping Cart</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -57,25 +57,25 @@ const onChange=(e)=>{setFilter(e.target.value)}
         
 
         {!isLogin &&  
-        <Navbar.Brand href="/login" style={{ margin:"15px" }}>Login </Navbar.Brand> }
+        <Navbar.Brand  style={{ margin:"15px" }}><Link to="/login" className="text-light text-decoration-none">Login</Link></Navbar.Brand> }
 
      { isLogin &&  
-     <Navbar.Brand href="/" onClick={handleOnClick} style={{ margin:"15px" }} > Logout </Navbar.Brand> }
+     <Navbar.Brand  onClick={handleOnClick} style={{ margin:"15px" }} ><Link to="/" className="text-light text-decoration-none">Logout</Link> </Navbar.Brand> }
 
       {!isLogin ?
-           <Navbar.Brand href="/register" onClick={handleOnClick} style={{ margin:"15px" }}> Register </Navbar.Brand> 
+           <Navbar.Brand onClick={handleOnClick} style={{ margin:"15px" }}> <Link to="/register" className="text-light text-decoration-none">Register</Link> </Navbar.Brand> 
           :"null"   }
             
 
       
-           <Navbar.Brand href="/email" onClick={handleOnClick}style={{ margin:"15px" }} > Contact Us </Navbar.Brand>  
+           <Navbar.Brand onClick={handleOnClick}style={{ margin:"15px" }} ><Link to="/email" className="text-light text-decoration-none">Contact Us</Link> </Navbar.Brand>  
   
            <div className="ml-2"style={{ margin:"8px" }}  >
             <Dropdown alignRight>
             <Dropdown.Toggle variant="ligh">
             <Button variant="dark">
             <i class="fas fa-shopping-cart"></i> <Badge bg="secondary">{cart.length}</Badge>
-  <span className="visually-hidden">unread messages</span>
+
 </Button>
 {/*             
               
@@ -108,11 +108,10 @@ const onChange=(e)=>{setFilter(e.target.value)}
                       />
                     </span>
                   ))}
-                  <Link to="/cart">
-                    <Button >
-                      Go To Cart
-                    </Button>
-                  </Link>
+                  
+                <Dropdown.Item as="button"> <Link to="/cart" className="btn btn-secondary ">Go To Cart </Link>
+                    </Dropdown.Item>
+                
                 </>
               ) : (
                 <span style={{ padding: 10 }}>Cart is Empty!</span>
